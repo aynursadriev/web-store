@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Каталог товаров</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240327134339">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__wide">
+				<div class="header__container">
+
+					<!--<div id="progress"></div>-->
+
+					<div class="header__main">
+
+						<button type="button" class="menu__icon icon-menu" aria-label="Меню"><span></span></button>
+
+						<a href="home.html" class="header__logo">web store</a>
+
+						<div class="header__menu menu">
+
+							<nav class="menu__body">
+
+								<ul class="menu__list">
+									<li class="menu__item"><a href="home.html" class="menu__link">Главная</a></li>
+									<li class="menu__item"><a href="product.html" class="menu__link">Карточка товара</a></li>
+									<li class="menu__item"><button data-popup="#popup-cart" class="menu__link">Корзина</button></li>
+									<li class="menu__item"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
+								</ul>
+
+							</nav>
+						</div>
+
+						<div class="header__buttons">
+
+							<button aria-label="В избранное" href="#" class="header__btn-like">
+								<span class="header__icon _icon-heart"></span>
+								<div class="header__quantity-l"></div>
+							</button>
+
+							<button aria-label="В корзину" data-popup="#popup-cart" class="header__btn-cart">
+								<span class="header__icon _icon-cart"></span>
+								<div class="header__quantity"></div>
+							</button>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</header>
+		<main class="mainpage">
+
+			<section class="mainpage-catalog">
+				<div class="mainpage-catalog__wide">
+					<div class="mainpage-catalog__container">
+
+						<h1 class="mainpage-catalog__title mainpage-catalog__title_first mainpage-title">Каталог
+							товаров</h1>
+
+						<div class="mainpage-catalog__body">
+
+							<div class="mainpage-catalog__column">
+
+								<div class="mainpage-catalog__sidebar">
+
+									<div class="mainpage-catalog__form catalog-form">
+
+										<div class="catalog-form__main">
+
+											<button class="catalog-form__close-wrapper sidebar-btn" aria-label="Закрыть">
+												<span class="catalog-form__close"></span>
+											</button>
+
+											<input id="search-input" class="catalog-form__input input" autocomplete="off" type="text" name="form[]" placeholder="Я ищу.." value="">
+
+											<p class="catalog-form__text">Цена Р</p>
+
+											<div class="catalog-form__form-range form-range">
+
+												<div class="form-range__body">
+
+													<div class="form-range__column">
+														<label for="price-start" class="form-range__label">От</label>
+														<input id="price-start" autocomplete="off" type="number" name="form[]" value="" class="form-range__input input input_price-start">
+													</div>
+
+													<div class="form-range__column">
+														<label for="price-end" class="form-range__label">До</label>
+														<input id="price-end" autocomplete="off" type="number" name="form[]" value="" class="form-range__input input input_price-end">
+													</div>
+
+												</div>
+
+												<div class="form-range__range" id="range"></div>
+
+											</div>
+
+
+											<div data-spollers class="catalog-form__spollers spollers">
+												<div class="spollers__item">
+													<button type="button" data-spoller class="spollers__title">Тип аккаунта</button>
+													<div class="spollers__body catalog-form">
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="b-1" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="b-1" class="checkbox__label"><span class="checkbox__text">Аккаунт</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="b-2" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="b-2" class="checkbox__label"><span class="checkbox__text">Лицинзионный
+																	ключ</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="b-3" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="b-3" class="checkbox__label"><span class="checkbox__text">Активация</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="b-4" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="b-4" class="checkbox__label"><span class="checkbox__text">Лицинзионный
+																	ключ</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="b-5" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="b-5" class="checkbox__label"><span class="checkbox__text">Активация</span></label>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<div data-spollers class="catalog-form__spollers spollers">
+												<div class="spollers__item">
+													<button type="button" data-spoller class="spollers__title">Тип аккаунта</button>
+													<div class="spollers__body catalog-form">
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="c-1" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="c-1" class="checkbox__label"><span class="checkbox__text">Аккаунт</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="c-2" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="c-2" class="checkbox__label"><span class="checkbox__text">Лицинзионный
+																	ключ</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="c-3" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="c-3" class="checkbox__label"><span class="checkbox__text">Активация</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="c-4" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="c-4" class="checkbox__label"><span class="checkbox__text">Лицинзионный
+																	ключ</span></label>
+														</div>
+
+														<div class="catalog-form__checkbox checkbox">
+															<input id="c-5" class="checkbox__input" type="checkbox" name="form[]">
+															<label for="c-5" class="checkbox__label"><span class="checkbox__text">Активация</span></label>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="catalog-form__box">
+												<p class="catalog-form__text">Только скидки</p>
+												<label class="switch">
+													<input class="dark-theme-btn" type="checkbox">
+													<span class="slider"></span>
+												</label>
+											</div>
+
+											<div class="catalog-form__box">
+												<p class="catalog-form__text">Новинки</p>
+												<label class="switch">
+													<input class="dark-theme-btn" type="checkbox">
+													<span class="slider"></span>
+												</label>
+											</div>
+
+										</div>
+
+										<div class="catalog-form__button-wrapper">
+											<button id="resetButton" class="catalog-form__button mainpage-link mainpage-link_size">Сбросить
+												фильтры</button>
+											<div class="catalog-form__button-bottom"></div>
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="mainpage-catalog__column">
+
+								<div class="mainpage-catalog__row">
+									<button class="mainpage-catalog__btn _icon-filter sidebar-btn" aria-label="Фильтр"></button>
+
+									<h1 class="mainpage-catalog__title mainpage-catalog__title_second mainpage-title">Каталог
+										товаров</h1>
+
+									<div class="mainpage-catalog__select-wrapper">
+										<select name="form[]" class="mainpage-catalog__select">
+											<option value="1" selected>Сначала дешевые</option>
+											<option value="2">Сначала дорогие</option>
+											<option value="3">По алфавиту</option>
+										</select>
+									</div>
+
+								</div>
+
+
+								<div id="productContainer" class="mainpage-catalog__main mainpage-products mainpage-products_catalog">
+
+									<article data-num="1" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/1.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Очки Oakley Jawbreaker Black</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+									<article data-num="4" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/4.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Рюкзак Osprey Kyte 48 Black</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+									<article data-num="5" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/5.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/5.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Компас горно-геологический RGK DQL-8</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+									<article data-num="6" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/6.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/6.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Бинокль Pentax SP 8x40</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+									<article data-num="7" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/7.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/7.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Фляга HydraPak Stow 1L Gray</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+									<article data-num="8" class="mainpage-products__product mainpage-product">
+
+										<div class="mainpage-product__body">
+
+											<a href="#" class="mainpage-product__image-wrapper">
+												<div class="mainpage-product__image-ibg">
+													<picture><source data-srcset="img/mainpage-store/covers/8.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-store/covers/8.jpg" alt="Картинка"></picture>
+												</div>
+											</a>
+
+											<button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">
+												<span class="mainpage-btn__btn _icon-heart"></span>
+											</button>
+
+											<button class="mainpage-product__button">В корзину</button>
+
+										</div>
+
+										<div class="mainpage-product__main">
+
+											<div class="mainpage-product__info mainpage-price">
+
+												<div class="mainpage-price__price mainpage-value">
+													<p class="mainpage-value__item-first">16 400 P</p>
+													<p class="mainpage-value__item-second">-15%</p>
+													<p class="mainpage-value__item-third">16 400 P</p>
+												</div>
+
+												<div class="mainpage-price__content">
+													<p class="mainpage-price__text">Ботинки мужские UYN Monte Cervino WP Green</p>
+												</div>
+
+											</div>
+
+											<div class="mainpage-product__buttons">
+												<button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>
+												<button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>
+											</div>
+
+										</div>
+
+									</article>
+
+								</div>
+
+								<button class="mainpage-products__btn" id="loadMoreButton">Показать больше</button>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__wide">
+				<div class="footer__container">
+
+					<div class="footer__logos">
+						<img class="footer__logo footer__logo_first" data-src="img/footer/1.svg" alt="Картинка">
+						<img class="footer__logo footer__logo_second" data-src="img/footer/2.svg" alt="Картинка">
+						<img class="footer__logo footer__logo_third" data-src="img/footer/3.svg" alt="Картинка">
+						<img class="footer__logo footer__logo_fourth" data-src="img/footer/4.svg" alt="Картинка">
+						<img class="footer__logo footer__logo_fifth" data-src="img/footer/5.svg" alt="Картинка">
+						<img class="footer__logo footer__logo_first" data-src="img/footer/1.svg" alt="Картинка">
+					</div>
+
+					<div class="footer__body">
+
+						<div class="footer__column">
+							<a href="#" class="footer__text">О компании</a>
+							<a href="#" class="footer__txt">О нас</a>
+							<a href="#" class="footer__txt">Вакансии</a>
+							<a href="#" class="footer__txt">Реквизиты</a>
+						</div>
+
+						<div class="footer__column">
+							<a href="#" class="footer__text">Договор оферты</a>
+							<a href="#" class="footer__txt">Каталог</a>
+							<a href="#" class="footer__txt">Акции</a>
+							<a href="#" class="footer__txt">Личный кабинет</a>
+						</div>
+
+						<div class="footer__column">
+							<a href="#" class="footer__text">Договор оферты</a>
+							<a href="#" class="footer__txt">Каталог</a>
+							<a href="#" class="footer__txt">Акции</a>
+							<a href="#" class="footer__txt">Личный кабинет</a>
+						</div>
+
+						<div class="footer__row">
+
+							<div class="footer__box">
+
+								<div class="footer__image-wrapper">
+									<img class="footer__img" data-src="img/footer/6.svg" alt="Картинка">
+								</div>
+
+								<div class="footer__bloc">
+									<p class="footer__note footer__note_color">verified</p>
+									<p class="footer__note footer__note_color">WebMoney</p>
+								</div>
+							</div>
+
+							<div class="footer__box">
+
+								<div class="footer__image-wrapper">
+									<img class="footer__image" data-src="img/footer/7.svg" alt="Картинка">
+								</div>
+
+								<div class="footer__bloc">
+									<p class="footer__note footer__note_color">Safe Browsing</p>
+									<p class="footer__note footer__note_color">Google</p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="footer__line mainpage-line"></div>
+
+					<div class="footer__main">
+						<a href="#" class="footer__txt footer__txt_color">Правовая информация</a>
+						<p class="footer__text footer__text_color">Интернет-магазин Web Store © 2023</p>
+
+						<div class="footer__icons">
+							<a href="#" class="footer__icon _icon-vk" aria-label="ВКонтакте"></a>
+							<a href="#" class="footer__icon _icon-discord" aria-label="Дискорд"></a>
+							<a href="#" class="footer__icon _icon-twitter" aria-label="Твиттер"></a>
+							<a href="#" class="footer__icon _icon-instagram" aria-label="Инстаграм"></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<section id="popup-cart" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content mainpage-payment">
+
+				<button data-close type="button" class="popup__close">&times;</button>
+
+				<h1 class="mainpage-payment__title mainpage-title">
+					<span class="mainpage-payment__title-text">Корзина</span>
+					<span class="mainpage-payment__quantity"></span>
+				</h1>
+
+				<form data-dev method="POST" action="#" class="mainpage-payment__row">
+
+					<div class="mainpage-payment__body">
+
+						<div class="mainpage-payment__main">
+							<h2 class="mainpage-payment__sub-title">Войдите или зарегистрируйтесь</h2>
+							<p class="mainpage-payment__text">Вы сможете накапливать бонусные рубли
+								и использовать их при оплате до 50% стоимости товаров.</p>
+							<a href="#" class="mainpage-payment__link">Войти</a>
+						</div>
+
+						<div class="mainpage-payment__products">
+
+							<!--
+
+                  <div class="mainpage-payment__product">
+
+                     <div class="mainpage-payment__image-wrapper">
+                        <div class="mainpage-payment__image-ibg">
+                           <picture><source data-srcset="img/mainpage-payment/deus-ex.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainpage-payment/deus-ex.jpg" alt="Картинка"></picture>
+                        </div>
+                     </div>
+
+                     <div class="mainpage-payment__content-wrapper">
+
+                        <div class="mainpage-payment__content">
+
+                           <button type="button" class="mainpage-payment__close-wrapper" aria-label="Закрыть">
+                              <span class="mainpage-payment__close"></span>
+                           </button>
+
+                           <p class="mainpage-payment__txt">Minecraft</p>
+
+                           <div class="mainpage-payment__box">
+                              <div class="mainpage-payment__price mainpage-value">
+                                 <p class="mainpage-value__item-first">16 400 P</p>
+                                 <p class="mainpage-value__item-second">-15%</p>
+                                 <p class="mainpage-value__item-third">16 400 P</p>
+                              </div>
+
+                              <div data-da=".buttons-first,600,0" class="mainpage-payment__counter quantity">
+                                 <div class="quantity__button quantity__button_minus _icon-minus"></div>
+                                 <div class="quantity__input"><input autocomplete="off" type="text"
+                                       aria-label="Количество" name="form[]" value="1"></div>
+                                 <div class="quantity__button quantity__button_plus _icon-plus"></div>
+                              </div>
+
+                           </div>
+
+                           <p class="mainpage-payment__word">Регион активации<span>Россия и страны СНГ</span>
+                           </p>
+                           <p class="mainpage-payment__word">Сервис активации<span>Steam</span></p>
+
+                        </div>
+
+                        <div class="mainpage-payment__payment-buttons buttons-first">
+                           <button type="button" class="mainpage-payment__btn-like _icon-heart"
+                              aria-label="В избранное"></button>
+                        </div>
+
+                     </div>
+
+
+
+                  </div>
+
+                  -->
+
+							<div class="mainpage-payment__info">Корзина пуста</div>
+
+						</div>
+
+						<div id="my-options" class="mainpage-payment__options options">
+
+							<div class="options__main">
+
+								<div class="options__item">
+
+									<div class="options__row">
+										<input hidden id="o-1" class="options__input" checked type="radio" value="1" name="option">
+										<label for="o-1" class="options__label"><span class="options__text">Эллектронные
+												кошельки</span></label>
+									</div>
+
+									<div class="options__box">
+										<img class="options__img options__img_first" data-src="img/mainpage-payment/logo/1.svg" alt="Логотип">
+										<img class="options__img options__img_second" data-src="img/mainpage-payment/logo/2.svg" alt="Логотип">
+									</div>
+
+								</div>
+
+								<div class="options__item">
+
+									<div class="options__row">
+										<input hidden id="o-2" class="options__input" checked type="radio" value="2" name="option">
+										<label for="o-2" class="options__label"><span class="options__text">Банковские
+												карты</span></label>
+									</div>
+
+									<div class="options__box">
+										<img class="options__img options__img_third" data-src="img/mainpage-payment/logo/3.svg" alt="Логотип">
+										<img class="options__img options__img_fourth" data-src="img/mainpage-payment/logo/4.svg" alt="Логотип">
+										<img class="options__img options__img_fifth" data-src="img/mainpage-payment/logo/5.svg" alt="Логотип">
+									</div>
+
+								</div>
+
+								<div class="options__item">
+
+									<div class="options__row">
+										<input hidden id="o-3" class="options__input" checked type="radio" value="3" name="option">
+										<label for="o-3" class="options__label"><span class="options__text">Криптовалюта</span></label>
+									</div>
+
+									<div class="options__box">
+										<img class="options__img options__img_sixth" data-src="img/mainpage-payment/logo/6.svg" alt="Логотип">
+										<img class="options__img options__img_seventh" data-src="img/mainpage-payment/logo/7.svg" alt="Логотип">
+									</div>
+
+								</div>
+
+								<div class="options__item">
+
+									<div class="options__row">
+										<input hidden id="o-4" class="options__input" checked type="radio" value="4" name="option">
+										<label for="o-4" class="options__label"><span class="options__text">Samsung
+												pay</span></label>
+									</div>
+
+									<div class="options__box">
+										<img class="options__img options__img_eighth" data-src="img/mainpage-payment/logo/8.svg" alt="Логотип">
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="mainpage-payment__email payment-form">
+								<label for="e-1" class="payment-form__label">Укажите почту</label>
+								<input id="e-1" data-required="email" data-validate class="payment-form__input input" autocomplete="off" type="email" name="form[]">
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="mainpage-payment__column">
+
+						<div class="mainpage-payment__sidebar">
+
+							<div class="mainpage-payment__block">
+
+								<div class="mainpage-payment__text-wrapper">
+									<p id="numProducts" class="mainpage-payment__text"></p>
+									<p class="mainpage-payment__text">товаров</p>
+								</div>
+
+								<div class="mainpage-payment__value-wrapper">
+									<p id="sumProducts" class="mainpage-payment__value"></p>
+									<p class="mainpage-payment__value">Р</p>
+								</div>
+
+								<div id="my-form" class="mainpage-payment__form payment-form">
+									<button type="submit" class="payment-form__button mainpage-link mainpage-link_size mainpage-link_color" href="#">Оформить
+										заказ</button>
+
+									<div class="payment-form__checkbox checkbox">
+										<input data-required data-validate data-no-focus-classes id="a-1" class="checkbox__input" type="checkbox" name="form[]">
+										<label for="a-1" class="checkbox__label"><span class="checkbox__text">Покупая
+												данный
+												товар, я подтверждаю, что ознакомился и согласен с <a href="#">условиями
+													магазина</a></span></label>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="mainpage-payment__note"><span>%</span>Если у вас есть купон на скидку, Вы
+								сможете
+								ввести его на следующем этапе</div>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+	</section>
+	<script src="js/app.min.js?_v=20240327134339"></script>
+</body>
+
+</html>
