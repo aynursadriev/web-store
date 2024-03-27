@@ -1744,9 +1744,13 @@ body::after {
 }
 
 .mainpage-product {
-  display: -ms-grid;
-  display: grid;
-  margin-bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @supports (row-gap: clamp( 0.9375rem , 0.8344072165rem  +  0.5154639175vw , 1.25rem )) {
@@ -1779,9 +1783,6 @@ body::after {
 
 .mainpage-product__body {
   position: relative;
-  -ms-flex-item-align: self-start;
-      -ms-grid-row-align: self-start;
-      align-self: self-start;
 }
 
 .mainpage-product__body:hover button {
@@ -1807,6 +1808,7 @@ body::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   row-gap: 0.625rem;
+  height: 100%;
 }
 
 .mainpage-product__buttons {
@@ -1952,9 +1954,9 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @supports (row-gap: clamp( 0.4375rem , 0.2725515464rem  +  0.824742268vw , 0.9375rem )) {
@@ -1995,6 +1997,9 @@ body::after {
 
 .mainpage-price__content {
   line-height: 1.5;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @supports (font-size: clamp( 0.875rem , 0.7925257732rem  +  0.412371134vw , 1.125rem )) {

@@ -396,7 +396,7 @@
                 document.documentElement.classList.add(className);
             }));
         }
-        function functions_getHash() {
+        function getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
         function setHash(hash) {
@@ -592,7 +592,7 @@
             const tabs = document.querySelectorAll("[data-tabs]");
             let tabsActiveHash = [];
             if (tabs.length > 0) {
-                const hash = functions_getHash();
+                const hash = getHash();
                 if (hash && hash.startsWith("tab-")) tabsActiveHash = hash.replace("tab-", "").split("-");
                 tabs.forEach(((tabsBlock, index) => {
                     tabsBlock.classList.add("_tab-init");
@@ -990,7 +990,7 @@
             }
         }
         flsModules.popup = new Popup({});
-        let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+        let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
             if (targetBlockElement) {
                 let headerItem = "";
@@ -1166,7 +1166,7 @@
                 } else {
                     e.preventDefault();
                     const formError = form.querySelector("._form-error");
-                    if (formError && form.hasAttribute("data-goto-error")) gotoblock_gotoBlock(formError, true, 1e3);
+                    if (formError && form.hasAttribute("data-goto-error")) gotoBlock(formError, true, 1e3);
                 }
             }
             function formSent(form) {
@@ -6357,15 +6357,6 @@
             class_loaded: "_lazy-loaded",
             use_native: true
         });
-        let addWindowScrollEvent = false;
-        setTimeout((() => {
-            if (addWindowScrollEvent) {
-                let windowScroll = new Event("windowScroll");
-                window.addEventListener("scroll", (function(e) {
-                    document.dispatchEvent(windowScroll);
-                }));
-            }
-        }), 0);
         /*!
  * lightgallery | 2.7.2 | September 20th 2023
  * http://www.lightgalleryjs.com/
