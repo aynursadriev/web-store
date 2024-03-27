@@ -1,6 +1,6 @@
 [
    {
-      "imageSrc": "../img/mainpage-store/covers/1.jpg",
+      "imageSrc": "img/mainpage-store/covers/1.jpg",
       "productName": "Очки Oakley Jawbreaker Black",
       "price": "16 400 P",
       "discount": "-15%",
@@ -8,7 +8,7 @@
       "num": 1
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/2.jpg",
+      "imageSrc": "img/mainpage-store/covers/2.jpg",
       "productName": "Фонарь ручной Fenix TK26R",
       "price": "16 400 P",
       "discount": "-15%",
@@ -16,7 +16,7 @@
       "num": 2
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/3.jpg",
+      "imageSrc": "img/mainpage-store/covers/3.jpg",
       "productName": "Нож Zero Tolerance CPM 20CV Stonewash",
       "price": "16 400 P",
       "discount": "-15%",
@@ -24,7 +24,7 @@
       "num": 3
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/4.jpg",
+      "imageSrc": "img/mainpage-store/covers/4.jpg",
       "productName": "Рюкзак Osprey Kyte 48 Black",
       "price": "16 400 P",
       "discount": "-15%",
@@ -32,7 +32,7 @@
       "num": 4
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/5.jpg",
+      "imageSrc": "img/mainpage-store/covers/5.jpg",
       "productName": "Компас горно-геологический RGK DQL-8",
       "price": "16 400 P",
       "discount": "-15%",
@@ -40,7 +40,7 @@
       "num": 5
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/6.jpg",
+      "imageSrc": "img/mainpage-store/covers/6.jpg",
       "productName": "Бинокль Pentax SP 8x40",
       "price": "16 400 P",
       "discount": "-15%",
@@ -48,7 +48,7 @@
       "num": 6
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/7.jpg",
+      "imageSrc": "img/mainpage-store/covers/7.jpg",
       "productName": "Фляга HydraPak Stow 1L Gray",
       "price": "16 400 P",
       "discount": "-15%",
@@ -56,7 +56,7 @@
       "num": 7
    },
    {
-      "imageSrc": "../img/mainpage-store/covers/8.jpg",
+      "imageSrc": "img/mainpage-store/covers/8.jpg",
       "productName": "Ботинки мужские UYN Monte Cervino WP Green",
       "price": "16 400 P",
       "discount": "-15%",
