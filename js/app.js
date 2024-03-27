@@ -8251,7 +8251,7 @@ PERFORMANCE OF THIS SOFTWARE.
             if (!loadMoreButton) return;
             let page = 1;
             function loadMoreProducts() {
-                fetch("../../files/products.json").then((response => response.json())).then((data => {
+                fetch("files/products.json").then((response => response.json())).then((data => {
                     const productsToShow = data.slice((page - 1) * 3, page * 3);
                     productsToShow.forEach((product => {
                         const productHTML = `\n                       <article data-num="${product.num}" class="mainpage-products__product mainpage-product fade-in">\n                           <div class="mainpage-product__body">\n                               <a href="#" class="mainpage-product__image-wrapper">\n                                   <div class="mainpage-product__image-ibg">\n                                       <img src="${product.imageSrc}" alt="Картинка">\n                                   </div>\n                               </a>\n                               <button class="mainpage-product__btn-wrapper mainpage-btn" aria-label="В избранное">\n                                   <span class="mainpage-btn__btn _icon-heart"></span>\n                               </button>\n                               <button class="mainpage-product__button">В корзину</button>\n                           </div>\n                           <div class="mainpage-product__main">\n                               <div class="mainpage-product__info mainpage-price">\n                                   <div class="mainpage-price__price mainpage-value">\n                                       <p class="mainpage-value__item-first">${product.price}</p>\n                                       <p class="mainpage-value__item-second">${product.discount}</p>\n                                       <p class="mainpage-value__item-third">${product.originalPrice}</p>\n                                   </div>\n                                   <div class="mainpage-price__content">\n                                       <p class="mainpage-price__text">${product.productName}</p>\n                                   </div>\n                               </div>\n                               <div class="mainpage-product__buttons">\n                                   <button class="mainpage-product__btn-like _icon-heart" aria-label="В избранное"></button>\n                                   <button class="mainpage-product__btn-cart _icon-cart" aria-label="В корзину"></button>\n                               </div>\n                           </div>\n                       </article>\n                   `;
@@ -8693,7 +8693,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         async function fetchProductData(productNum) {
             try {
-                const response = await fetch("../../files/products.json");
+                const response = await fetch("files/products.json");
                 const data = await response.json();
                 const productData = data.find((product => product.num === productNum));
                 return productData;
