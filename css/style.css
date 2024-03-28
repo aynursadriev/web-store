@@ -163,6 +163,12 @@ h6 {
       touch-action: none;
 }
 
+body.lock {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;

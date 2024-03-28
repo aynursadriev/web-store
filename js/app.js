@@ -8199,9 +8199,11 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         const btnOpen = document.querySelectorAll(".sidebar-btn");
         const sidebar = document.querySelector(".mainpage-catalog__sidebar");
+        const body = document.querySelector("body");
         if (btnOpen && sidebar) btnOpen.forEach((btn => {
             btn.addEventListener("click", (function() {
                 sidebar.classList.toggle("sidebar-open");
+                body.classList.toggle("lock");
             }));
         }));
         document.addEventListener("DOMContentLoaded", (function() {
